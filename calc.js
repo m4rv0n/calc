@@ -13,25 +13,25 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     case 'multiply':
                         result = first * second;
                         document.getElementById('result').value = result;
-                        history.innerHTML = 'Rechnung: ' + first + ' * ' + second + ' = ' + result;
+                        history.innerHTML = 'calculation: ' + first + ' * ' + second + ' = ' + result;
                         document.getElementById('history').appendChild(history);
                         break;
                     case 'divide':
                         result = first / second;
                         document.getElementById('result').value = result;
-                        history.innerHTML = 'Rechnung: ' + first + ' / ' + second + ' = ' + result;
+                        history.innerHTML = 'calculation: ' + first + ' / ' + second + ' = ' + result;
                         document.getElementById('history').appendChild(history);
                         break;
                     case 'add':
                         result = first + second;
                         document.getElementById('result').value = result;
-                        history.innerHTML = 'Rechnung: ' + first + ' + ' + second + ' = ' + result;
+                        history.innerHTML = 'calculation: ' + first + ' + ' + second + ' = ' + result;
                         document.getElementById('history').appendChild(history);
                         break;
                     case 'subtract':
                         result = first - second;
                         document.getElementById('result').value = result;
-                        history.innerHTML = 'Rechnung: ' + first + ' - ' + second + ' = ' + result;
+                        history.innerHTML = 'calculation: ' + first + ' - ' + second + ' = ' + result;
                         document.getElementById('history').appendChild(history);
                         break;
                     default:
