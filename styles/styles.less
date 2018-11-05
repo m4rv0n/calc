@@ -1,0 +1,96 @@
+@color1: rgba(35, 31, 32, 1);
+@color2: rgba(186, 48, 82, 1);
+@color3: rgba(193, 125, 142, 1);
+@color4: rgba(242, 162, 182, 1);
+@color5: rgba(239, 220, 225, 1);
+@color6: rgba(88, 78, 80, 1);
+
+html {
+  background: @color2;
+  color: @color5;
+  text-transform: lowercase;
+}
+
+body {
+  font: 300 18px/1.6 "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 1em 0 0 2em;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+#container {
+  width: 750px;
+
+  input {
+    &[type='number'] {
+      margin: 0 0 5px 0;
+      height: 2em;
+      padding: 2px 7.5px 2px 7.5px;
+      width: 400px;
+      background: @color6;
+      border: 1px solid @color3;
+      color: @color5;
+
+      &::placeholder {
+        text-transform: lowercase;
+        color: rgba(239, 220, 225, 0.5);
+      }
+    }
+
+    &[type='button'] {
+      height: 2.5em;
+      border: none;
+      width: 250px;
+      background: @color6;
+      border: 1px solid @color3;
+      color: @color5;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  .operations {
+    label {
+      margin: 0 0 5px 0;
+      display: inline-block;
+      input[type="radio"] {
+        display: none;
+        + span {
+          text-transform: uppercase;
+          background: @color4;
+          color: #fff;
+          font-size: 20px;
+          text-align: center;
+          width: 50px;
+          cursor: pointer;
+          display: block;
+          position: relative;
+        @include transition(background 0.1 s ease-in);
+          &:hover {
+            background: darken(@color4, 10);
+          }
+        }
+        &:checked {
+          + span {
+            background: darken(@color4, 20);
+          }
+        }
+      }
+    }
+  }
+
+  * {
+    display: block;
+  }
+}

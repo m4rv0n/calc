@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <title>simple javascript calculator</title>
     <script src="calc.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
 </head>
 <body>
+<h1>simple javascript calculator</h1>
 <div id="container">
-    <input id="first" type="number">
-    <select id="symbol">
-        <option value="multiplication">&times;</option>
-        <option value="division">&#8725;</option>
-        <option value="addition">&plus;</option>
-        <option value="subtraction">&minus;</option>
-    </select>
-    <input id="second" type="number">
-    <input type="button" id="calc" value="Calculate">
-    <br>
-    <br>
+    <input id="first" type="number" placeholder="First Number">
+
+    <div class="operations">
+        <label>
+            <input type="radio" name="operation" value="multiply"/>
+            <span>&times;</span>
+        </label>
+        <label>
+            <input type="radio" name="operation" value="divide"/>
+            <span>/</span>
+        </label>
+        <label>
+            <input type="radio" name="operation" value="add"/>
+            <span>&plus;</span>
+        </label>
+        <label>
+            <input type="radio" name="operation" value="subtract"/>
+            <span>&minus;</span>
+        </label>
+    </div>
+
+    <input id="second" type="number" placeholder="Second Number">
+    <input type="button" id="calc" value="calculate">
+
+    <label for="result">Result:</label>
     <input type="number" id="result" disabled>
 </div>
 <div id="history">
